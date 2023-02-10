@@ -2,14 +2,10 @@
 # -*- coding: utf-8 -*-
 # @Author: renpp
 # @Desc: { 模块描述 }
-# @Date: 2023/02/09 15:44
-# @Script: a2.py
+# @Date: 2023/02/10 9:16
+# @Script: a3.py
 
 
-import sys
-import argparse
-import re
-#import pandas as pd
 
 
 def parse_args():
@@ -23,21 +19,11 @@ def parse_args():
 
 
 def fun1(count, output):
-    pass
-
-def fun2(i,o):
-    pass
 
 
 def main():
     args = parse_args()
     fun1(args.count, args.output)
-
-
-for i in range(1,10):
-    for j in range(1,10):
-        print("{} x {} = {}\t".format(i,j,i*j),end="")
-    print()
 
 
 if __name__ == '__main__':
