@@ -1,14 +1,32 @@
-# 这是一个示例 Python 脚本。
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Author: renpp
+# @Desc: { common code Test }
+# @Date: 2023/02/10 9:16
+# @Script: main.py
 
-# 按 Shift+F10 执行或将其替换为您的代码。
-# 按 双击 Shift 在所有地方搜索类、文件、工具窗口、操作和设置。
+from collections import defaultdict, Counter
+from common import Seq, Read_file
+import pandas as pd
+import numpy as np
+import joblib
+import matplotlib.pyplot as plt
 
+#Seq类-数据
+DNA = "ATGCGCatccgTTGGccAAACTTGACTA"
+seq = Seq(DNA)
+#Seq类-方法
+s1 = seq.revcom()
+s2 = seq.reverse()
+s3 = seq.complement()
+s4 = seq.atgc()
+s5 = seq.repeat()
 
-def print_hi(name):
-    # 在下面的代码行中使用断点来调试脚本。
-    print(f'Hi, {name}')  # 按 Ctrl+F8 切换断点。
+#Read_file类 - 数据
+f = Read_file("genome.fa")
+#Read_file类-方法
+#a = f.read_fasta()
+a = f.read_fastq()
+for k1, k2, k3, k4  in a:
+    print(k1, k2, k3, k4)
 
-
-# 按间距中的绿色按钮以运行脚本。
-if __name__ == '__main__':
-    print_hi('PyCharm')
