@@ -19,6 +19,11 @@ def parse_args():
 
 
 def fun1(count, output):
+    pass
+
+def fun2(i,o):
+    pass
+
 
 
 def main():
